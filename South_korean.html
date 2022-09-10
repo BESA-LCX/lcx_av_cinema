@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩国激情</title>
+    <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="content-top">
+        <ul class="menu-group">
+            <li class="menu-group-item Msiwa">丝袜</li>
+                <li class="menu-group-item Mhushi">护士</li>
+                <li class="menu-group-item Mnv">女子校生</li>
+                <li class="menu-group-item Mol">秘书ol</li>
+                <li class="menu-group-item Mluoli">萝莉</li>
+                <li class="menu-group-item Mrenqi">人妻</li>
+                <li class="menu-group-item Mrenqi">熟女</li>
+                <li class="menu-group-item MCarshock">车震</li>
+                <li class="menu-group-item Myanshe">颜射</li>
+                <li class="menu-group-item Mwaishe">外射</li>
+                <li class="menu-group-item Mzc">中出</li>
+                <li class="menu-group-item Mnvup">女上位</li>
+                <li class="menu-group-item Mendinter">后入</li>
+                <li class="menu-group-item Myue">约炮</li>
+                <li class="menu-group-item" id="cancel" style="background-color: rgb(216, 65, 65);">取消筛选</li>
+                <li class="menu-group-item Mkyoshi">女教师</li>
+                <li class="menu-group-item Mca">CA空姐</li>
+                <li class="menu-group-item Mht">家教</li>
+                <li class="menu-group-item Mout">户外</li>
+                <li class="menu-group-item Mtao">戴套</li>
+        </ul>
+        <!--menu-group-->
+    </div>
+    <!--content-top-->
+    <!--vue 虚拟dom app-->
+    <div id="app">
+        <div id="container2">
+            <h4 class="text-white ms-3">韩国激情</h4>
+            <div class="header-right-content" style="gap: 15px;">
+                <div :class="j.class" :id="j.id" v-for="(j,index) in boxgroup" @click="open_play()">
+                    <img :data-src="j.src" alt="" src="img/load.gif">
+                    <div class="box-foot">{{j.text}}</div>
+                    <div class="detail">
+                        <p class="btn-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+                       <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+                     </svg>
+                        </p>
+                    </div>
+                    <!--detail-->
+                </div>
+            </div>
+        </div>
+        <!--container2-->
+    </div>
+    <!--app vue 虚拟dom-->
+    <div class="container" id="video-player">
+        <p class="ms-2 mt-3"><span class="return-file" onclick="return_html4()">返回</span><span class="title"></span></p>
+        <div id="video">
+            <video src="" controls id="vs"></video>
+        </div>
+    </div>
+
+
+    <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    <script src="js/modol_picture.js"></script>
+    <script src="js/video.js"></script>
+</body>
+
+</html>

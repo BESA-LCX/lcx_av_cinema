@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物资储备计划</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 40%;
+            margin: auto;
+            box-shadow: 0px 0px 8px rgb(91, 226, 231);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid rgb(250, 255, 255);
+        }
+        
+        option {
+            background-color: black;
+            color: white;
+        }
+        
+        option,
+        th,
+        td {
+            padding: 8px;
+            text-align: center;
+        }
+        
+        th {
+            font-weight: bold;
+        }
+        
+        th,
+        td {
+            background-color: rgb(223, 233, 243);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <table border="1">
+                <option>物资储备计划</option>
+                <tr>
+                    <th>序号</th>
+                    <th>分类</th>
+                    <th>商品</th>
+                    <th>数量</th>
+                </tr>
+                <tr v-for="i in food" :key="i.index">
+                    <td>{{i.index}}</td>
+                    <td>食品类</td>
+                    <td>{{i.good}}</td>
+                    <td>{{i.count}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="js/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                food: [{
+                        index: 1,
+                        good: '老抽',
+                        count: '1'
+                    }, {
+                        index: 2,
+                        good: '酱油',
+                        count: '1'
+                    }, {
+                        index: 3,
+                        good: '料酒',
+                        count: '1'
+                    }, {
+                        index: 4,
+                        good: '黄豆酱',
+                        count: '1'
+                    }, {
+                        index: 5,
+                        good: '红油',
+                        count: '1'
+                    }, {
+                        index: 6,
+                        good: '午餐肉',
+                        count: '2'
+                    }, {
+                        index: 7,
+                        good: '紫菜',
+                        count: '2'
+                    }, {
+                        index: 8,
+                        good: '水饺',
+                        count: '2'
+                    }, {
+                        index: 9,
+                        good: '方便面',
+                        count: "自定义增加"
+                    }, {
+                        index: 10,
+                        good: '米',
+                        count: '1'
+                    }, {
+                        index: 11,
+                        good: '面粉',
+                        count: '2'
+                    }, {
+                        index: 12,
+                        good: '猪肉里脊',
+                        count: ""
+                    }, {
+                        index: 13,
+                        good: '猪肉肉末',
+                        count: ""
+                    }, {
+                        index: 14,
+                        good: '小葱',
+                        count: '2'
+                    }, {
+                        index: 15,
+                        good: '姜',
+                        count: ""
+                    }, {
+                        index: 16,
+                        good: '大蒜',
+                        count: ''
+                    }, {
+                        index: 17,
+                        good: '南瓜',
+                        count: ''
+                    }, {
+                        index: 18,
+                        good: '土豆',
+                        count: ''
+                    }, {
+                        index: 19,
+                        good: '鸡蛋',
+                        count: '多买'
+                    }, {
+                        index: 20,
+                        good: '油',
+                        count: '1'
+                    }, {
+                        index: 21,
+                        good: '鸡腿肉',
+                        count: ''
+                    }, {
+                        index: 22,
+                        good: '咖喱块',
+                        count: '2'
+                    }, {
+                        index: 23,
+                        good: '豆瓣酱',
+                        count: '1'
+                    }, {
+                        index: 24,
+                        good: '奥尔良腌料',
+                        count: '1'
+                    },
+
+                ]
+            },
+
+            methods: {
+
+            },
+            created() {
+                let x = this.food.length;
+                console.log(x);
+                console.log(this.food);
+            }
+        })
+    </script>
+</body>
+
+</html>

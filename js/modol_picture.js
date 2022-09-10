@@ -188,7 +188,7 @@ var app = new Vue({
     },
     methods: {
         pageChange(k) {
-            $(".content-top,#container,#container2").hide();
+            $(".content-top,.container-content").hide();
             $("#video-player").show();
             this.info = k;
             $("title").text(k.text);

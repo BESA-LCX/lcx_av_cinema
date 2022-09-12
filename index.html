@@ -297,7 +297,7 @@
         <div id="container3" class="container-content">
             <h4 class="ms-3 container-content-title">台湾特色一览</h4>
             <div class="header-right-content" style="gap: 15px;">
-                <div :class="j.class" :id="j.id" v-for="(j,index) in sousuo1()">
+                <div :class="j.class" :id="j.id" v-for="(j,index) in boxgroup2">
                     <img :data-src="j.src" alt="" src="img/load.gif">
                     <div class="box-foot" :title="j.text">{{j.text}}</div>
                     <div class="detail">
@@ -323,7 +323,7 @@
         <div id="container4" class="container-content">
             <h4 class="ms-3 container-content-title">国产系列一览</h4>
             <div class="header-right-content" style="gap: 15px;">
-                <div :class="j.class" :id="j.id" v-for="(j,index) in sousuo1()">
+                <div :class="j.class" :id="j.id" v-for="(j,index) in boxgroup3">
                     <img :data-src="j.src" alt="" src="img/load.gif">
                     <div class="box-foot" :title="j.text">{{j.text}}</div>
                     <div class="detail">
@@ -349,7 +349,7 @@
         <div id="container5" class="container-content">
             <h4 class="ms-3 container-content-title">韩国激情一览</h4>
             <div class="header-right-content" style="gap: 15px;">
-                <div :class="j.class" :id="j.id" v-for="(j,index) in sousuo1()">
+                <div :class="j.class" :id="j.id" v-for="(j,index) in boxgroup4">
                     <img :data-src="j.src" alt="" src="img/load.gif">
                     <div class="box-foot" :title="j.text">{{j.text}}</div>
                     <div class="detail">
@@ -375,7 +375,7 @@
         <div id="container6" class="container-content">
             <h4 class="ms-3 container-content-title">欧美情色一览</h4>
             <div class="header-right-content" style="gap: 15px;">
-                <div :class="j.class" :id="j.id" v-for="(j,index) in sousuo1()">
+                <div :class="j.class" :id="j.id" v-for="(j,index) in boxgroup5">
                     <img :data-src="j.src" alt="" src="img/load.gif">
                     <div class="box-foot" :title="j.text">{{j.text}}</div>
                     <div class="detail">
@@ -403,7 +403,7 @@
             <div class="header-right-content" style="gap: 15px;">
                 <div class="box-Erect" :id="j.id" v-for="(j,index) in boxgroup" @click="open_play()">
                     <img :data-src="j.src" alt="" src="img/load.gif">
-                    <div class="box-foot">{{j.text}}</div>
+                    <div class="box-foot" :title="j.text">{{j.text}}</div>
                     <div class="detail">
                         <p class="btn-play">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">

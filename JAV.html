@@ -45,7 +45,7 @@
             <h4 class="text-white ms-3">日本番号一览</h4>
             <div class="header-right-content" style="gap: 15px;">
                 <div :class="j.class" :id="j.id" v-for="(j,index) in boxgroupJav" @click="open_play2(j)">
-                    <img :data-src="j.src" alt="" src="">
+                    <img alt="" :src="j.src">
                     <div class="box-foot" :title="j.text">{{j.text}}</div>
                     <div class="detail">
                         <p class="btn-play">
@@ -72,6 +72,7 @@
 
     <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="data/jav.js"></script>
     <script src="js/vue.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
     <script src="js/modol_picture.js"></script>

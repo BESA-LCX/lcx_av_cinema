@@ -14,36 +14,36 @@
     <div class="content-top">
         <ul class="menu-group">
             <li class="menu-group-item Msiwa">丝袜</li>
-                <li class="menu-group-item Mhushi">护士</li>
-                <li class="menu-group-item Mnv">女子校生</li>
-                <li class="menu-group-item Mol">秘书ol</li>
-                <li class="menu-group-item Mluoli">萝莉</li>
-                <li class="menu-group-item Mrenqi">人妻</li>
-                <li class="menu-group-item Mrenqi">熟女</li>
-                <li class="menu-group-item MCarshock">车震</li>
-                <li class="menu-group-item Myanshe">颜射</li>
-                <li class="menu-group-item Mwaishe">外射</li>
-                <li class="menu-group-item Mzc">中出</li>
-                <li class="menu-group-item Mnvup">女上位</li>
-                <li class="menu-group-item Mendinter">后入</li>
-                <li class="menu-group-item Myue">约炮</li>
-                <li class="menu-group-item" id="cancel" style="background-color: rgb(216, 65, 65);">取消筛选</li>
-                <li class="menu-group-item Mkyoshi">女教师</li>
-                <li class="menu-group-item Mca">CA空姐</li>
-                <li class="menu-group-item Mht">家教</li>
-                <li class="menu-group-item Mout">户外</li>
-                <li class="menu-group-item Mtao">戴套</li>
+            <li class="menu-group-item Mhushi">护士</li>
+            <li class="menu-group-item Mnv">女子校生</li>
+            <li class="menu-group-item Mol">秘书ol</li>
+            <li class="menu-group-item Mluoli">萝莉</li>
+            <li class="menu-group-item Mrenqi">人妻</li>
+            <li class="menu-group-item Mrenqi">熟女</li>
+            <li class="menu-group-item MCarshock">车震</li>
+            <li class="menu-group-item Myanshe">颜射</li>
+            <li class="menu-group-item Mwaishe">外射</li>
+            <li class="menu-group-item Mzc">中出</li>
+            <li class="menu-group-item Mnvup">女上位</li>
+            <li class="menu-group-item Mendinter">后入</li>
+            <li class="menu-group-item Myue">约炮</li>
+            <li class="menu-group-item" id="cancel" style="background-color: rgb(216, 65, 65);">取消筛选</li>
+            <li class="menu-group-item Mkyoshi">女教师</li>
+            <li class="menu-group-item Mca">CA空姐</li>
+            <li class="menu-group-item Mht">家教</li>
+            <li class="menu-group-item Mout">户外</li>
+            <li class="menu-group-item Mtao">戴套</li>
         </ul>
         <!--menu-group-->
     </div>
     <!--content-top-->
     <!--vue 虚拟dom app-->
     <div id="app">
-        <div id="container2">
-            <h4 class="text-white ms-3">台湾SWAG</h4>
+        <div id="container2" class="container-content">
+            <h4 class="text-white ms-3">台湾特色</h4>
             <div class="header-right-content" style="gap: 15px;">
-                <div :class="j.class" :id="j.id" v-for="(j,index) in boxgroup" @click="open_play()">
-                    <img :data-src="j.src" alt="" src="img/load.gif">
+                <div :class="j.class" :id="j.id" v-for="(j,index) in boxgroupTw" @click="open_play2(j)">
+                    <img alt="" :src="j.src">
                     <div class="box-foot">{{j.text}}</div>
                     <div class="detail">
                         <p class="btn-play">
@@ -57,22 +57,26 @@
             </div>
         </div>
         <!--container2-->
-    </div>
-    <!--app vue 虚拟dom-->
-    <div class="container" id="video-player">
-        <p class="ms-2 mt-3"><span class="return-file" onclick="return_html2()">返回</span><span class="title"></span></p>
-        <div id="video">
-            <video src="" controls id="vs"></video>
+
+
+        <div class="container" id="video-player" :info="info">
+            <p class="ms-2 mt-3"><span class="return-file" onclick="return_html2()">返回</span><span class="title">{{info.text}}</span></p>
+            <div class="tags"><strong class="text-success">标签：</strong><span v-for="(x,index) in tags">{{x}}</span></div>
+            <div id="video">
+                <video :src="info.video" controls id="vs"></video>
+            </div>
         </div>
     </div>
-
+    <!--app vue 虚拟dom-->
 
 
     <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="data/tw.js"></script>
     <script src="js/vue.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
     <script src="js/modol_picture.js"></script>
+    <script src="js/index.js"></script>
     <script src="js/video.js"></script>
 
 </body>
